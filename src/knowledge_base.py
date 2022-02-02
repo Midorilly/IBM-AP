@@ -1,5 +1,8 @@
 import pytholog as pl
 import dataset as dt
+import pandas as pd
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 hr_kb = pl.KnowledgeBase('IBM-HR')
 df = dt.load_data()
@@ -96,7 +99,7 @@ def main():
 
     query_answ = None
     while query_answ not in query_range:
-        query_answ = int(input('Type a number:'))
+        query_answ = int(input('Choose a query:'))
 
     if query_answ == 0:
         for index, value in enumerate(education_field):

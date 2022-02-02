@@ -1,8 +1,8 @@
-import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import bnlearn
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 
 # Import dataset
@@ -51,6 +51,7 @@ def convert_to_ranges(df):
 
     return df_c
 
+
 # One-Hot Binary Encoding
 def convert_one_hot_encoding(df):
     df_c = df.copy()
@@ -95,14 +96,6 @@ def convert_one_hot_encoding(df):
     return df_c
 
 
-# Plot data distributions using kernel density estimation
-def plot_kde(df):
-    plt.figure('Data Distribution')
-    g = sns.pairplot(df, hue=['Attrition'], height=4)
-    g.map_upper(sns.kdeplot, levels=1, color=".2")
-    plt.show()
-
-
 # Plot correlation matrix
 def plot_corr_matrix(df):
     plt.figure(figsize=(50, 20))
@@ -113,7 +106,6 @@ def plot_corr_matrix(df):
 
 def get_educationfield_department(df):
     return df[['EducationField', 'Department']].drop_duplicates().to_dict(orient="records")
-    #return df.groupby(['Department', 'EducationField'], sort=False)['Department', 'EducationField'].apply(lambda x: list(np.unique(x)))
 
 
 def get_avg_monthlyincome(df):
