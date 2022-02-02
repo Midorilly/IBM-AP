@@ -7,5 +7,5 @@ Pensato come uno strumento che possa aiutare gli addetti alle risorse umane, lâ€
 ## Root
 - **dataset/** contiene il dataset in formato .csv
 - **src/** contiene il codice sorgente in python
-- **plot/** contiene le immagini della matrice di correlazione, della distribuzione dei dati e del DAG 
+- **plot/** contiene le immagini della matrice di correlazione e del DAG 
 - **doc/** contiene la relazione completa del progetto
